@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý thông tin hộ khẩu, nhân khẩu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quản lý Thông tin Hộ Khẩu, Nhân Khẩu</h1>
+      <div class="layout">
+        <!-- Cột bên trái: Hiển thị danh sách hộ khẩu và nhân khẩu -->
+        <div class="left-column">
+          <!-- Danh sách hộ khẩu -->
+          <h2>Danh sách Hộ Khẩu</h2>
+          <ul id="household-list"></ul>
+
+          <!-- Danh sách nhân khẩu -->
+          <h2>Danh sách Nhân Khẩu</h2>
+          <ul id="person-list"></ul>
+        </div>
+
+        <!-- Cột bên phải: Form thêm hộ khẩu và nhân khẩu -->
+        <div class="right-column">
+          <!-- Form thêm hộ khẩu -->
+          <h2>Thêm Hộ Khẩu Mới</h2>
+          <form id="add-household-form">
+            <label for="household-id">Mã hộ khẩu:</label>
+            <input type="text" id="household-id" required />
+
+            <label for="household-owner">Họ tên chủ hộ:</label>
+            <input type="text" id="household-owner" required />
+
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" required />
+
+            <button type="submit">Thêm Hộ Khẩu</button>
+          </form>
+
+          <!-- Form thêm nhân khẩu -->
+          <h2>Thêm Nhân Khẩu Vào Hộ Khẩu</h2>
+          <form id="add-person-form">
+            <label for="household-select">Chọn hộ khẩu:</label>
+            <select id="household-select"></select>
+
+            <label for="person-name">Họ tên:</label>
+            <input type="text" id="person-name" required />
+
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" required />
+
+            <label for="relation">Quan hệ với chủ hộ:</label>
+            <input type="text" id="relation" required />
+
+            <button type="submit">Thêm Nhân Khẩu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
